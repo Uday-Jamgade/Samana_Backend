@@ -36,7 +36,7 @@ const upload = multer({
 });
 
 
-router.post('/', upload.single('image'), async (req, res) => {
+router.post('/post', upload.single('image'), async (req, res) => {
     try {
         const { title, slug, badge, description, features, price } = req.body;
 
@@ -84,7 +84,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     }
 });
 
-router.get('/', async (req, res) => {
+router.get('/get', async (req, res) => {
     try {
         const festivals = await Festival.find().sort({ createdAt: -1 });
         res.status(200).json(festivals);
