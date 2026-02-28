@@ -21,6 +21,6 @@ App.use('/api/bookings', BookingRoutes);
 App.use('/api/festivals', festivalRoutes);
 App.use('/api/v1', UserRoutes);
 
-App.listen(3000, (req,res) => {
+App.listen(process.env.PORT || 3000, (req,res) => {
   console.log('Server is running on port 3000');
 });
