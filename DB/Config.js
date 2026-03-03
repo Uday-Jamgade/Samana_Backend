@@ -6,7 +6,7 @@ mongoose.connect(url,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   tlsAllowInvalidCertificates: false,
-  tlsInsecure: false
+ 
 })
   .then(() => {
     console.log("Connected to MongoDB successfully");   
